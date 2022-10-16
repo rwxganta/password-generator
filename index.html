@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Password generator</title>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Karla:wght@800&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<section class="generator">
+		<div class="generator-body">
+			<h2 class="generator-title">Generate a <span class="title-accent">random password</span></h2>
+			<p class="generator-description">Never use an insecure password again.</p>
+
+			<!-- button outside form has type='button' default(?) -->
+			<button type="button" class="generator-button" onclick="generate()">Generate passwords</button>
+		</div>
+
+		<div class="generator-passwords">
+			<span class="password-field"></span>
+			<span class="password-field"></span>
+		</div>
+	</section>
+
+	<script src="app.js"></script>
+</body>
+</html>
