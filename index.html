@@ -1,29 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Password generator</title>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Karla:wght@800&display=swap" rel="stylesheet">
-
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Karla:wght@800&display=swap"
+		rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
+	<script src="app.js" defer></script>
 </head>
+
 <body>
-	<section class="generator">
-		<div class="generator-body">
-			<h2 class="generator-title">Generate a <span class="title-accent">random password</span></h2>
-			<p class="generator-description">Never use an insecure password again.</p>
-
-			<!-- button outside form has type='button' default(?) -->
-			<button type="button" class="generator-button" onclick="generate()">Generate passwords</button>
+	<h1>Password Generator</h1>
+	<form id='generator' action="#">
+		<div class="input-field">
+			<input type="text" name="password" id="password" placeholder='P4$5W0rD!'>
+			<button id='clipboard' type='button'>
+				<svg width="32" height="32" stroke-width="1.1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000">
+					<path d="M19.4 20H9.6a.6.6 0 0 1-.6-.6V9.6a.6.6 0 0 1 .6-.6h9.8a.6.6 0 0 1 .6.6v9.8a.6.6 0 0 1-.6.6z" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>
+					<path d="M15 9V4.6a.6.6 0 0 0-.6-.6H4.6a.6.6 0 0 0-.6.6v9.8a.6.6 0 0 0 .6.6H9" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>
+				</svg>
+			</button>
 		</div>
 
-		<div class="generator-passwords">
-			<span class="password-field"></span>
-			<span class="password-field"></span>
-		</div>
-	</section>
+		<div class="config-field">
+			<div class="length">
+				<p>Character Length</p>
+				<p class='length-count'>0</p>
+				<input type="range" name="length" id="length" min='8' max='32'>
+			</div>
 
-	<script src="app.js"></script>
+			<div class="checkbox">
+				<div class="checkbox-wrap">
+					<input type="checkbox" name="upperCase" id="upperCase">
+					<label for="upperCase">Include Uppercase Letters</label>
+				</div>
+				<div class="checkbox-wrap">
+					<input type="checkbox" name="lowerCase" id="lowerCase">
+					<label for="lowerCase">Include Lowercase Letters</label>
+				</div>
+				<div class="checkbox-wrap">
+					<input type="checkbox" name="number" id="number">
+					<label for="number">Include Numbers</label>
+				</div>
+				<div class="checkbox-wrap">
+					<input type="checkbox" name="symbol" id="symbol">
+					<label for="symbol">Include Symbols</label>
+				</div>
+			</div>
+
+			<div class="strength">
+				<p>strength</p>
+				<div class="bars">
+					<div class="bar"></div>
+					<div class="bar"></div>
+					<div class="bar"></div>
+					<div class="bar"></div>
+				</div>
+			</div>
+		</div>
+
+		<button type="button">
+			Generate
+			<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" stroke-width="1.1" color="#000" viewBox="0 0 24 24">
+				<path stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="M3 12h18m0 0-8.5-8.5M21 12l-8.5 8.5"/>
+			</svg>
+		</button>
+	</form>
+
 </body>
+
 </html>
