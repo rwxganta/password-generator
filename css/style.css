@@ -166,6 +166,16 @@ form {
 	background-color: var(--light-green);
 }
 
+#length:active::-webkit-slider-thumb {
+	background-color: var(--night);
+	border: 2px solid var(--light-green);
+}
+
+#length:active::-moz-range-thumb {
+	background-color: var(--night);
+	border: 2px solid var(--light-green);
+}
+
 .checkbox {
 	margin-block: 1rem;
 
