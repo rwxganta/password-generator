@@ -112,8 +112,15 @@ form {
 }
 
 #length {
-	margin-top: .5rem;
+	margin-top: 1rem;
 	width: 100%;
+}
+
+.checkbox {
+	margin-block: 1rem;
+
+	display: grid;
+	gap: .5rem;
 }
 
 #generate {
