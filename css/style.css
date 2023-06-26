@@ -134,7 +134,47 @@ form {
 	margin-block: 1rem;
 
 	display: grid;
-	gap: .5rem;
+	gap: .7rem;
+}
+
+.checkbox-wrap {
+	display: flex;
+	align-items: center;
+	gap: .7rem;
+}
+
+input[type=checkbox] {
+	margin: 0;
+	width: 16px;
+	aspect-ratio: 1;
+	outline: 2px solid var(--guost-white);
+	appearance: none;
+
+	display: grid;
+	place-items: center;
+	
+	transition: outline 100ms ease-in-out;
+}
+
+/* ::before been styled to represent the :checked state */
+input[type=checkbox]::before {
+	content: '';
+	width: 100%;
+	aspect-ratio: 1;
+	background-color: var(--light-green);
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke-width='3' color='%23000' viewBox='0 0 24 24'%3E%3Cpath stroke='%23000' stroke-linecap='square' stroke-linejoin='square' d='m5 13 4 4L19 7'/%3E%3C/svg%3E%0A");
+	background-repeat: no-repeat;
+	transform: scale(0);
+	transition-property: transform, background-image;
+	transition-duration: 100ms;
+}
+
+input[type=checkbox]:checked::before {
+	transform: scale(1);
+}
+
+input[type=checkbox]:checked {
+	outline: 2px solid var(--light-green);
 }
 
 .strength {
