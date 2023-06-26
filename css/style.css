@@ -23,6 +23,17 @@
 	box-sizing: border-box;
 }
 
+
+html {
+	font-size: 100%;
+}
+
+@media (min-width: 360px) {
+	html {
+		font-size: 120%;
+	}
+}
+
 body {
 	margin-inline: 1.3rem;
 	min-height: 100vh;
