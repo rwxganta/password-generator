@@ -31,7 +31,6 @@ body {
 	background-color: var(--night);
 
 	display: flex;
-	/*flex-direction: column;*/
 	justify-content: center;
 	align-items: center;
 }
@@ -102,7 +101,6 @@ form {
 }
 
 .length-label {
-	/*outline: 1px solid red;*/
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -119,8 +117,38 @@ form {
 }
 
 #generate {
+	padding-block: .8rem;
 	font-size: .7rem;
 	font-weight: var(--fw-semibold);
 	color: var(--night);
+	background-color: var(--light-green);
 	text-transform: uppercase;
+	letter-spacing: 1px;
+	border: 0;
+	cursor: pointer;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: .4rem;
+
+	transition-property: background-color, color;
+	transition-duration: 200ms;
+}
+
+#generate svg {
+	width: 15px;
+	stroke: var(--night);
+	transition: transform 200ms;
+}
+
+#generate:hover {
+	color: var(--light-green);
+	background-color: unset;
+	outline: 1px solid var(--light-green);
+}
+
+#generate:hover svg {
+	stroke: var(--light-green);
+	transform: translateX(5px);
 }
