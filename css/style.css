@@ -142,12 +142,14 @@ form {
 	transition: transform 200ms;
 }
 
+#generate:focus,
 #generate:hover {
 	color: var(--light-green);
 	background-color: unset;
 	outline: 1px solid var(--light-green);
 }
 
+#generate:focus svg,
 #generate:hover svg {
 	stroke: var(--light-green);
 	transform: translateX(5px);
