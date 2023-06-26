@@ -84,6 +84,7 @@ form {
 	color: var(--guost-white);
 	background-color: transparent;
 	border: 0;
+	cursor: default;
 	outline: none;
 }
 
