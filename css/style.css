@@ -1,7 +1,9 @@
 :root {
 	/* Colors */
 	--night: hsl(250, 14%, 8%);
+	--night-hsl: 250, 14%, 8%;
 	--raisin-black: hsl(248, 10%, 15%);
+	--yellow-darkish: hsl(42, 91%, 68%);
 	--light-green: hsl(127, 100%, 82%);
 	--guost-white: hsl(250, 18%, 93%);
 	--guost-white-hsl: 250, 18%, 93%;
@@ -121,6 +123,31 @@ form {
 
 	display: grid;
 	gap: .5rem;
+}
+
+.strength {
+	padding: 1rem;
+	font-weight: var(--fw-semibold);
+	background-color: hsla(var(--night-hsl), .6);
+
+	display: flex;
+	justify-content: space-between;
+}
+
+.bars {
+	display: flex;
+	justify-content: space-between;
+	gap: .4rem;
+}
+
+.bar {
+	outline: .1rem solid var(--guost-white);
+	width: 4px;
+}
+
+.bar:nth-child(1) {
+	outline: .1rem solid var(--yellow-darkish);
+	background-color: var(--yellow-darkish);
 }
 
 #generate {
